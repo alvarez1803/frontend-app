@@ -10,7 +10,7 @@
     <!-- Barra de Navegación -->
     <nav class="navbar navbar-expand-lg bg-body-tertiary bg-dark" data-bs-theme="dark">
       <div class="container-fluid">
-        <a class="navbar-brand" href="index.html">Tienda Online</a>
+        <a class="navbar-brand" href="index.html">DogLandia</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -27,7 +27,7 @@
       </div>
     </nav>
 
-    <!-- FORMULARIO PARA AGREGAR PRODUCTO -->
+    <!-- FORMULARIO PARA AGREGAR AL CANINO -->
     <main class="container pt-3 pb-3">
       <div class="row">
         <div class="col">
@@ -39,22 +39,22 @@
           <form id="product-form">
             <div class="mb-3">
               <label for="name" class="form-label">Nombre del Canino </label>
-              <input type="text" class="form-control" id="name" placeholder="Nombre del producto" required>
+              <input type="text" class="form-control" id="name" placeholder="Nombre del Canino" required>
             </div>
 
             <div class="mb-3">
               <label for="description" class="form-label">Descripción</label>
-              <textarea type="text" class="form-control" id="description" placeholder="Descripción del producto" required></textarea>
+              <textarea type="text" class="form-control" id="description" placeholder="Descripción del Canino" required></textarea>
             </div>
 
             <div class="mb-3">
               <label for="price" class="form-label">Precio</label>
-              <input type="number" class="form-control" id="price" placeholder="Precio del producto" required>
+              <input type="number" class="form-control" id="price" placeholder="Precio del Canino" required>
             </div>
 
             <div class="mb-3">
               <label for="imgUrl" class="form-label">Imagen del Canino</label>
-              <input type="text" class="form-control" id="imgUrl" placeholder="Imagen del producto" required>
+              <input type="text" class="form-control" id="imgUrl" placeholder="Imagen del Canino" required>
             </div>
 
             <button type="submit" class="btn btn-success">Guardar</button>
@@ -67,7 +67,7 @@
     <script type="module" src="js/api.js"></script>
     <script type="module">
       import { addProduct } from './js/api.js';
-      // Guardar Formulario de agregar producto en base de datos
+      // Guardar Formulario de agregar al canino en base de datos
       document.getElementById('product-form').addEventListener('submit', async (e) => {
         e.preventDefault();
         const newProduct = {

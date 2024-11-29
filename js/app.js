@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     `).join('');
 });
 
-// Crear la vista de detalles para cada producto al dar click en el boton ver más
+// Crear la vista de detalles para cada canino al dar click en el boton ver más
 window.viewProduct = async (id) => {
   const product = await getProductById(id);
   const productDetails = `
@@ -34,7 +34,7 @@ window.viewProduct = async (id) => {
   document.getElementById('product-list').innerHTML = productDetails;
 };
 
-// Habilitamos el formulario para editar cada uno de los productos
+// Habilitamos el formulario para editar cada uno de los caninos
 window.enableEdit = async (id) => {
   const product = await getProductById(id);
   const editForm = `
@@ -61,7 +61,7 @@ window.saveEdit = async (id) => {
   location.reload(); // Recarga la página para ver los cambios
 };
 
-// Función para borrar el producto seleccionado
+// Función para borrar el canino seleccionado
 window.deleteProduct = async (id) => {
   await deleteProduct(id);
   location.reload(); // Recarga la página para ver los cambios

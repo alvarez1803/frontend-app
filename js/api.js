@@ -1,5 +1,5 @@
 // Colocamos la ruta del servidor 
-const API_URL = "http://localhost:3000/api/products";
+const API_URL = "http://localhost:3000/api/dogs";
 
 // Obtener todos los Caninos
 export const getProducts = async () => {

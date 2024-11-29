@@ -1,5 +1,5 @@
 // Importando los métodos de api.js
-import { getProducts, getProductById, updateProduct, deleteProduct } from './js/api.js';
+import { getProducts, getProductByID, updateProduct, deleteProduct } from './api.js';
 
 // Traer los productos y crear cada uno en la página principal
 document.addEventListener('DOMContentLoaded', async () => {
@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
 // Crear la vista de detalles para cada canino al dar click en el boton ver más
 window.viewProduct = async (id) => {
-  const product = await getProductById(id);
+  const product = await getProductByID(id);
   const productDetails = `
     <div class="col">
       <img class="img-fluid" src="${product.imgUrl}">
@@ -36,7 +36,7 @@ window.viewProduct = async (id) => {
 
 // Habilitamos el formulario para editar cada uno de los caninos
 window.enableEdit = async (id) => {
-  const product = await getProductById(id);
+  const product = await getProductByID(id);
   const editForm = `
     <div class="row gap-3">
       <input type="text" id="name" value="${product.name}">
